@@ -174,7 +174,8 @@ img {
  */
 
 button,
-input {
+input,
+select {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
@@ -196,7 +197,8 @@ input { /* 1 */
  * 1. Remove the inheritance of text transform in Firefox.
  */
 
-button { /* 1 */
+button,
+select { /* 1 */
   text-transform: none;
 }
 
@@ -317,6 +319,10 @@ legend {
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
 
+details {
+  display: block;
+}
+
 /*
  * Add the correct display in all browsers.
  */
@@ -356,6 +362,7 @@ h2,
 h3,
 h4,
 h5,
+h6,
 hr,
 p,
 pre {
@@ -475,7 +482,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -499,7 +507,8 @@ a {
  */
 
 button,
-input {
+input,
+select {
   padding: 0;
   line-height: inherit;
   color: inherit;
@@ -529,7 +538,8 @@ img,
 svg,
 video,
 canvas,
-iframe {
+iframe,
+object {
   display: block;
   vertical-align: middle;
 }
@@ -576,6 +586,18 @@ video {
 }
 
 @tailwind perflight;
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 
 .bg-white {
   --bg-opacity: 1;
@@ -730,6 +752,10 @@ video {
   display: table;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
 }
@@ -808,6 +834,12 @@ video {
 
 .flex-grow {
   flex-grow: 1;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .font-normal {

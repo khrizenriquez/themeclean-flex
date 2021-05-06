@@ -1,5 +1,5 @@
 <template>
-  <div v-bind:data-per-path="model.path">productdetail</div>
+<div v-bind:data-per-path="model.path">productdetail
 
   <div class="title aem-GridColumn aem-GridColumn--default--12">
     <div id="title-6abc8848c3" class="cmp-title">
@@ -16,74 +16,7 @@
 
     <div class="aem-Grid aem-Grid--9 aem-Grid--default--9 ">
 
-      <div class="we-jecisProductList aem-GridColumn--default--9 aem-GridColumn"><style>
-        /*
-        https://codepen.io/fahrettinaksoy/pen/VKwqwR
-        */
-        .wrapper {
-          margin: 50px auto;
-          width: 280px;
-          height: 370px;
-          background: white;
-          border-radius: 10px;
-          position: relative;
-          z-index: 90;
-        }
-
-        .ribbon-wrapper-red {
-          width: 100px;
-          height: 100px;
-          overflow: hidden;
-          position: absolute;
-          top: -3px;
-          right: -3px;
-          z-index: 99;
-        }
-        .ribbon-red {
-          font: bold 15px Sans-Serif;
-          color: #fff;
-          text-align: center;
-          text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
-          -webkit-transform: rotate(45deg);
-          -moz-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-          -o-transform: rotate(45deg);
-          position: relative;
-          padding: 7px 0;
-          left: -5px;
-          top: 15px;
-          width: 120px;
-          background-color: #2980b9;
-          background-image: -webkit-gradient(linear, left top, left bottom, from(#3498db), to(#2980b9));
-          background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-          background-image: -moz-linear-gradient(top, #3498db, #8EBF45);
-          background-image: -ms-linear-gradient(top, #3498db, #8EBF45);
-          background-image: -o-linear-gradient(top, #3498db, #8EBF45);
-          color: #fff;
-          -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-          -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-          box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-        }
-
-        .ribbon-red:before,
-        .ribbon-red:after{
-          content: "";
-          border-top: 3px solid #3498db;
-          border-left: 3px solid transparent;
-          border-right: 3px solid transparent;
-          position:absolute;
-          bottom: -3px;
-        }
-
-        .ribbon-red:before{
-          left: 0;
-        }
-
-        .ribbon-red:after{
-          right: 0;
-        }
-      </style>
-
+      <div class="we-jecisProductList aem-GridColumn--default--9 aem-GridColumn">
         <div class="page-loader">
           <div class="spinner-border" role="status">
             <span class="sr-only">Loading...</span>
@@ -92,7 +25,7 @@
 
 
 
-        <link rel="stylesheet" href="/apps/wkndjecis/components/content/jecisSingleProduct/clientlibs.css" type="text/css">
+        <!-- <link rel="stylesheet" href="/apps/wkndjecis/components/content/jecisSingleProduct/clientlibs.css" type="text/css">
         <link rel="stylesheet" href="/apps/wkndjecis/components/content/jecisProductList/clientlibs.css" type="text/css">
 
 
@@ -101,7 +34,7 @@
 
         <script type="text/javascript" src="/apps/wkndjecis/components/content/jecisSingleProduct/clientlibs.js"></script>
         <script type="text/javascript" src="/apps/wkndjecis/components/content/jecisProductList/clientlibs.js"></script>
-
+ -->
 
 
 
@@ -227,6 +160,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -235,3 +169,67 @@
     }
 </script>
 
+<style scoped>
+        .wrapper {
+          margin: 50px auto;
+          width: 280px;
+          height: 370px;
+          background: white;
+          border-radius: 10px;
+          position: relative;
+          z-index: 90;
+        }
+
+        .ribbon-wrapper-red {
+          width: 100px;
+          height: 100px;
+          overflow: hidden;
+          position: absolute;
+          top: -3px;
+          right: -3px;
+          z-index: 99;
+        }
+        .ribbon-red {
+          font: bold 15px Sans-Serif;
+          color: #fff;
+          text-align: center;
+          text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          position: relative;
+          padding: 7px 0;
+          left: -5px;
+          top: 15px;
+          width: 120px;
+          background-color: #2980b9;
+          background-image: -webkit-gradient(linear, left top, left bottom, from(#3498db), to(#2980b9));
+          background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+          background-image: -moz-linear-gradient(top, #3498db, #8EBF45);
+          background-image: -ms-linear-gradient(top, #3498db, #8EBF45);
+          background-image: -o-linear-gradient(top, #3498db, #8EBF45);
+          color: #fff;
+          -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+          -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+          box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+        }
+
+        .ribbon-red:before,
+        .ribbon-red:after{
+          content: "";
+          border-top: 3px solid #3498db;
+          border-left: 3px solid transparent;
+          border-right: 3px solid transparent;
+          position:absolute;
+          bottom: -3px;
+        }
+
+        .ribbon-red:before{
+          left: 0;
+        }
+
+        .ribbon-red:after{
+          right: 0;
+        }
+</style>

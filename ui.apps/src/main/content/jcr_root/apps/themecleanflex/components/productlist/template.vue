@@ -1,6 +1,5 @@
 <template>
-  <div v-bind:data-per-path="model.path">productlist</div>
-
+<div v-bind:data-per-path="model.path">productlist
   <div class="row">
     <div class="col-md-12">
       <div class="row row-eq-height">
@@ -216,6 +215,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
