@@ -154,6 +154,8 @@
 
         <!-- Close the content-top1 DIV -->
         <div class="clearfix"></div>
+
+        <div>{{productData}}</div>
       </div>
     </div>
   </div>
@@ -162,7 +164,23 @@
 
 <script>
     export default {
-        props: ['model']
+      props: ['model'],
+      created() {
+        console.log('Component has been created!')
+        console.log(this.getProductData())
+      },
+      data() {
+        return {
+          productData: []
+        };
+      },
+      methods: {
+          getProductData() {
+            fetch("/japi/listCategories.json/wknd")
+                .then(response => (response.json()))
+                .then(data => (this.productData = data));
+          }
+        }
     }
 </script>
 
